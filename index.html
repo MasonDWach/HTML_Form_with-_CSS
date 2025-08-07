@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>User Information Form</h1>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <form action="results.html" method="GET">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label>
+                    First Name
+                    <input type="text" name="fname" id="frame" placeholder="First Name" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label>
+                    Email
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label>
+                    Age
+                    <input type="number" name="age" id="age" min="18" max="130" step="2" placeholder="Enter Age" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label>
+                    Birthday
+                    <input type="date" name="date" id="date" required min="2022-01-01">
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber">
+            </div>
+
+            <!-- Preferences -->
+            <div class="form-group">
+                Favorite Season:
+            </div>
+            <div class="checkbox-group">
+                <label class="checkbox-option">
+                    Winter
+                    <input type="checkbox" name="Winter" id="Winter">
+                </label>
+                <label class="checkbox-option">
+                    Summer
+                    <input type="checkbox" name="Summer" id="Summer">
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    User Name
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                </label>
+            </div>
+            
+            <div class="form-group">
+                Do you prefer Nightime or Daytime
+                <div class="radio-group">
+                    <label class="radio-option">  
+                        Night  
+                        <input type="radio" name="preference" id="night" value="Night">  
+                    </label>  
+                    <label class="radio-option">  
+                        Day  
+                        <input type="radio" name="preference" id="day" value="Day">  
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">  
+                <label for="faveDay">Favorite Weekday</label>  
+                <select name="faveDay" id="faveDay" multiple>  
+                    <option value="Monday">Monday</option>  
+                    <option label="Tuesday" value="Tuesday"></option>  
+                    <option value="Wednesday">Wednesday</option>  
+                    <option value="Thursday">Thursday</option>  
+                    <option value="Friday" selected>Friday</option>  
+                    <option value="Saturday">Saturday</option>  
+                    <option value="Sunday">Sunday</option>  
+                </select>  
+            </div>
+            
+            <div class="form-group">  
+                <label>  
+                    Password  
+                    <input type="password" name="password" id="password" placeholder="Password" required>  
+                </label>  
+            </div>
+            
+            <div class="form-group">  
+                <textarea name="opinion" id="opinion">Tell us what you think</textarea>  
+            </div>
+            
+            <div class="form-group">
+                <label for="url">URL</label>
+                <input type="url" name="webUrl" id="webUrl">
+            </div>
+            
+            <div class="form-group">
+                <label for="favecolor">Favorite Color</label>
+                <input type="color" name="favecolor" id="favecolor">
+            </div>
+            
+            <input type="hidden" name="sessionId" id="sessionId" value="secretRandomNumberUsedtoManageTheSession">
+            
+            <div class="button-group">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <form action="results.html" method="GET" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fileUpload">Upload File</label>
+                <input type="file" name="fileUpload" id="fileUpload">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
